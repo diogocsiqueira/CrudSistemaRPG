@@ -18,6 +18,14 @@ public class MagicItemModel {
     private int forca;
     private int defesa;
 
+    public MagicItemModel(MagicItemModel item){
+        this.id = item.getId();
+        this.nome = item.getNome();
+        this.tipo = item.getTipo();
+        this.forca = item.getForca();
+        this.defesa = item.getDefesa();
+    }
+
     public int getId() {
         return id;
     }

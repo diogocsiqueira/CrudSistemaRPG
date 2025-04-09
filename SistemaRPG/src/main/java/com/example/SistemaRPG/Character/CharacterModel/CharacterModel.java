@@ -1,5 +1,6 @@
 package com.example.SistemaRPG.Character.CharacterModel;
 
+import com.example.SistemaRPG.MagicItem.MagicItemModels.MagicItemDTO;
 import com.example.SistemaRPG.MagicItem.MagicItemModels.MagicItemModel;
 import jakarta.persistence.*;
 
@@ -20,9 +21,12 @@ public class CharacterModel {
     private CharacterClassesEnum classe;
 
     private int level;
+
+    @OneToMany
     private List<MagicItemModel> listaItens;
-    private int forca;
-    private int defesa;
+
+    private int forcaBase;
+    private int defesaBase;
 
     public int getId() {
         return id;
@@ -68,19 +72,19 @@ public class CharacterModel {
         this.listaItens = listaItens;
     }
 
-    public int getForca() {
-        return forca;
+    public int getForcaBase() {
+        return forcaBase;
     }
 
-    public void setForca(int forca) {
-        this.forca = forca;
+    public void setForcaBase(int forca) {
+        this.forcaBase = forca;
     }
 
-    public int getDefesa() {
-        return defesa;
+    public int getDefesaBase() {
+        return defesaBase;
     }
 
-    public void setDefesa(int defesa) {
-        this.defesa = defesa;
+    public void setDefesaBase(int defesa) {
+        this.defesaBase = defesa;
     }
 }
