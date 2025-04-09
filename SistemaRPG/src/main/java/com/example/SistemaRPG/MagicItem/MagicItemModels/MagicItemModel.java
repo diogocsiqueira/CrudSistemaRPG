@@ -18,6 +18,8 @@ public class MagicItemModel {
     private int forca;
     private int defesa;
 
+    public MagicItemModel(){}
+
     public MagicItemModel(MagicItemModel item){
         this.id = item.getId();
         this.nome = item.getNome();

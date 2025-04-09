@@ -22,11 +22,10 @@ public class MagicItemDTO {
     @Max(value = 10, message = "Defesa não pode exceder 10")
     private int defesa;
 
-    // Construtor padrão
+
     public MagicItemDTO() {}
 
-    // Construtor para conversão de ItemMagico para DTO
-    public MagicItemDTO(MagicItemDTO item) {
+    public MagicItemDTO(MagicItemModel item) {
         this.id = item.getId();
         this.nome = item.getNome();
         this.tipo = item.getTipo();
@@ -34,8 +33,6 @@ public class MagicItemDTO {
         this.defesa = item.getDefesa();
     }
 
-
-    // Getters e Setters
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
     public String getNome() { return nome; }
